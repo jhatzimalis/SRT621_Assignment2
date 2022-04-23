@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Add a Book</title>
+    <link rel="stylesheet" href="/style">
+</head>
+<html>
+    <body>
+        <div class="container">
+            <h2>Add a new book:</h2>
+            <div class="bookContainer"></div>
+            <form action="/home/create" method="POST">
+                <label for="bookName">Book Name:</label><br>
+                <input type="text" name="bookName" required><br><br>
+                <label for="authorName">Author Name:</label><br>
+                <input type="text" name="authorName" required><br><br>
+                <label for="purchaseLink">Purchase Link:</label><br>
+                <input type="text" name="purchaseLink" required><br><br>
+                <input class="submitButton" type="submit" value="Submit">
+            </form>
+            <div class="nav">
+                <hr>  
+                <a href="../home">List of Books</a><span class="navPipe">|</span>
+                <a href="../AddNewBook">Add a Book</a><span class="navPipe">|</span>
+                <a href="../DeleteABook">Delete a Book</a>
+            </div>
+        </div>
+    </body>
+</html>

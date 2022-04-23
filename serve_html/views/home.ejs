@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/style">
+</head>
+<html>
+    <body>
+        <div class="container">
+            <h2>Click on any book to see the details.</h2>
+            <table class="bookContainer">
+                <% books.forEach(s=>
+                { %>
+                    <tr>
+                        <td class="book">
+                            <a href="<%= `/books/${s._id}` %>"><%= s.bookName %></a>
+                        </td>
+                    </tr>
+                <% });
+                %>
+            </table>
+            <div class="nav">
+                <hr>  
+                <a href="../home">List of Books</a><span class="navPipe">|</span>
+                <a href="../AddNewBook">Add a Book</a><span class="navPipe">|</span>
+                <a href="../DeleteABook">Delete a Book</a>
+            </div>
+        </div>
+    </body>
+</html>
